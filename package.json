@@ -1,0 +1,31 @@
+{
+    "name": "teledrive",
+    "version": "1.0.0",
+    "private": true,
+    "description": "TeleDrive - Cloud storage platform with Telegram integration",
+    "scripts": {
+        "dev": "turbo run dev",
+        "build": "turbo run build",
+        "test": "turbo run test",
+        "lint": "turbo run lint",
+        "clean": "turbo run clean",
+        "docker:up": "docker-compose up -d",
+        "docker:down": "docker-compose down",
+        "docker:logs": "docker-compose logs -f",
+        "setup": "pnpm install && pnpm docker:up"
+    },
+    "devDependencies": {
+        "turbo": "^2.0.0",
+        "typescript": "^5.3.3",
+        "@types/node": "^20.10.0",
+        "prettier": "^3.1.0",
+        "eslint": "^8.55.0",
+        "@typescript-eslint/parser": "^6.15.0",
+        "@typescript-eslint/eslint-plugin": "^6.15.0"
+    },
+    "engines": {
+        "node": ">=18.0.0",
+        "pnpm": ">=8.0.0"
+    },
+    "packageManager": "pnpm@8.15.0"
+}
