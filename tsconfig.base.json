@@ -15,18 +15,19 @@
         "declaration": true,
         "declarationMap": true,
         "sourceMap": true,
+        "types": ["node"],
         "outDir": "./dist",
         "rootDir": "./src",
         "baseUrl": ".",
         "paths": {
             "@teledrive/shared-types": [
-                "./packages/shared-types/src"
+                "./packages/shared-types/dist"
             ],
             "@teledrive/shared-utils": [
-                "./packages/shared-utils/src"
+                "./packages/shared-utils/dist"
             ],
             "@teledrive/shared-config": [
-                "./packages/shared-config/src"
+                "./packages/shared-config/dist"
             ]
         }
     },
