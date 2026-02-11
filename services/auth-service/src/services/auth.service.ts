@@ -1,6 +1,7 @@
 import { User } from '../models/user.models';
 import { verifyTelegramAuth } from '../utils/telegram-auth';
 import { generateTokens, verifyToken } from '../utils/jwt';
+import { publishUserRegistered, publishUserLoggedIn } from '../utils/kafka';
 import { IUser } from '@teledrive/shared-types';
 
 export class AuthService {
@@ -18,6 +19,7 @@ export class AuthService {
         // 2. Find or Create User (Upsert)
         const userId = authData.id.toString();
         let user = await User.findById(userId);
+        const isNewUser = !user;
 
         if (!user) {
             // Create new user
@@ -40,7 +42,13 @@ export class AuthService {
 
         await user.save();
 
-        // 3. Generate Tokens
+        // 3. Publish Kafka events
+        if (isNewUser && user.createdAt) {
+            await publishUserRegistered({ id: user._id, username: user.username, firstName: user.firstName, createdAt: user.createdAt });
+        }
+        await publishUserLoggedIn(user._id, new Date().toISOString());
+
+        // 4. Generate Tokens
         const userObj: IUser = { ...user.toObject(), id: user._id };
         const tokens = generateTokens(userObj);
 

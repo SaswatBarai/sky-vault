@@ -23,6 +23,7 @@ export interface Config {
         secret: string;
         expiresIn: string;
         refreshExpiresIn: string;
+        accessTokenExpiresIn: string;
     };
 
     // Telegram
@@ -100,7 +101,9 @@ export const config: Config = {
     jwt: {
         secret: getEnv('JWT_SECRET', 'your-super-secret-jwt-key-change-this-in-production'),
         expiresIn: getEnv('JWT_EXPIRES_IN', '15m'),
-        refreshExpiresIn: getEnv('JWT_REFRESH_EXPIRES_IN', '7d'),
+        // refreshExpiresIn: getEnv('JWT_REFRESH_EXPIRES_IN', '7d'),
+        refreshExpiresIn: getEnv('JWT_REFRESH_EXPIRES_IN', '30d'),
+        accessTokenExpiresIn: getEnv('JWT_ACCESS_TOKEN_EXPIRY', '15m'),
     },
 
     telegram: {

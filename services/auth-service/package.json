@@ -8,7 +8,8 @@
     "dev": "tsc --watch",
     "build": "tsc",
     "start": "node dist/index.js",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "test": "vitest run"
   },
   "dependencies": {
     "@teledrive/shared-config": "workspace:*",
@@ -20,13 +21,16 @@
     "express": "5.2.1",
     "helmet": "8.1.0",
     "jsonwebtoken": "9.0.3",
-    "mongoose": "9.2.0"
+    "kafkajs": "^2.2.4",
+    "mongoose": "9.2.0",
+    "zod": "4.3.6"
   },
   "devDependencies": {
     "@types/cors": "2.8.19",
     "@types/express": "^4.17.21",
     "@types/jsonwebtoken": "9.0.10",
     "@types/node": "^20.10.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vitest": "^2.0.0"
   }
 }
