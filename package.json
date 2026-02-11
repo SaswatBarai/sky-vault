@@ -4,6 +4,8 @@
     "private": true,
     "description": "TeleDrive - Cloud storage platform with Telegram integration",
     "scripts": {
+        "preinstall": "node -e \"if(process.env.npm_execpath.indexOf('pnpm') === -1) throw new Error('Use pnpm install')\"",
+        "postinstall": "test -f .env || cp .env.example .env",
         "dev": "turbo run dev",
         "build": "turbo run build",
         "test": "turbo run test",
@@ -16,7 +18,7 @@
     },
     "devDependencies": {
         "turbo": "^2.0.0",
-        "typescript": "^5.3.3",
+        "typescript": "^5.9.3",
         "@types/node": "^20.10.0",
         "prettier": "^3.1.0",
         "eslint": "^8.55.0",

@@ -27,7 +27,7 @@ importers:
         specifier: ^2.0.0
         version: 2.8.3
       typescript:
-        specifier: ^5.3.3
+        specifier: ^5.9.3
         version: 5.9.3
 
   packages/shared-config:
@@ -40,13 +40,13 @@ importers:
         specifier: ^20.10.0
         version: 20.19.33
       typescript:
-        specifier: ^5.3.3
+        specifier: ^5.9.3
         version: 5.9.3
 
   packages/shared-types:
     devDependencies:
       typescript:
-        specifier: ^5.3.3
+        specifier: ^5.9.3
         version: 5.9.3
 
   packages/shared-utils:
@@ -56,7 +56,7 @@ importers:
         version: link:../shared-types
     devDependencies:
       typescript:
-        specifier: ^5.3.3
+        specifier: ^5.9.3
         version: 5.9.3
 
   services/activity-log-service:
@@ -72,7 +72,7 @@ importers:
         version: link:../../packages/shared-utils
     devDependencies:
       typescript:
-        specifier: ^5.3.3
+        specifier: ^5.9.3
         version: 5.9.3
 
   services/admin-service:
@@ -88,7 +88,7 @@ importers:
         version: link:../../packages/shared-utils
     devDependencies:
       typescript:
-        specifier: ^5.3.3
+        specifier: ^5.9.3
         version: 5.9.3
 
   services/api-gateway:
@@ -104,7 +104,7 @@ importers:
         version: link:../../packages/shared-utils
     devDependencies:
       typescript:
-        specifier: ^5.3.3
+        specifier: ^5.9.3
         version: 5.9.3
 
   services/auth-service:
@@ -120,7 +120,7 @@ importers:
         version: link:../../packages/shared-utils
     devDependencies:
       typescript:
-        specifier: ^5.3.3
+        specifier: ^5.9.3
         version: 5.9.3
 
   services/download-service:
@@ -136,7 +136,7 @@ importers:
         version: link:../../packages/shared-utils
     devDependencies:
       typescript:
-        specifier: ^5.3.3
+        specifier: ^5.9.3
         version: 5.9.3
 
   services/file-metadata-service:
@@ -152,7 +152,7 @@ importers:
         version: link:../../packages/shared-utils
     devDependencies:
       typescript:
-        specifier: ^5.3.3
+        specifier: ^5.9.3
         version: 5.9.3
 
   services/file-processing-service:
@@ -168,7 +168,7 @@ importers:
         version: link:../../packages/shared-utils
     devDependencies:
       typescript:
-        specifier: ^5.3.3
+        specifier: ^5.9.3
         version: 5.9.3
 
   services/file-upload-service:
@@ -184,7 +184,7 @@ importers:
         version: link:../../packages/shared-utils
     devDependencies:
       typescript:
-        specifier: ^5.3.3
+        specifier: ^5.9.3
         version: 5.9.3
 
   services/notification-service:
@@ -200,7 +200,7 @@ importers:
         version: link:../../packages/shared-utils
     devDependencies:
       typescript:
-        specifier: ^5.3.3
+        specifier: ^5.9.3
         version: 5.9.3
 
   services/preview-service:
@@ -216,7 +216,7 @@ importers:
         version: link:../../packages/shared-utils
     devDependencies:
       typescript:
-        specifier: ^5.3.3
+        specifier: ^5.9.3
         version: 5.9.3
 
   services/storage-manager-service:
@@ -232,7 +232,7 @@ importers:
         version: link:../../packages/shared-utils
     devDependencies:
       typescript:
-        specifier: ^5.3.3
+        specifier: ^5.9.3
         version: 5.9.3
 
   services/user-service:
@@ -248,7 +248,7 @@ importers:
         version: link:../../packages/shared-utils
     devDependencies:
       typescript:
-        specifier: ^5.3.3
+        specifier: ^5.9.3
         version: 5.9.3
 
   services/video-streaming-service:
@@ -264,7 +264,7 @@ importers:
         version: link:../../packages/shared-utils
     devDependencies:
       typescript:
-        specifier: ^5.3.3
+        specifier: ^5.9.3
         version: 5.9.3
 
   services/websocket-service:
@@ -280,7 +280,7 @@ importers:
         version: link:../../packages/shared-utils
     devDependencies:
       typescript:
-        specifier: ^5.3.3
+        specifier: ^5.9.3
         version: 5.9.3
 
 packages:
