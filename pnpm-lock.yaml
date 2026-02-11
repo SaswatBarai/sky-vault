@@ -59,6 +59,230 @@ importers:
         specifier: ^5.3.3
         version: 5.9.3
 
+  services/activity-log-service:
+    dependencies:
+      '@teledrive/shared-config':
+        specifier: workspace:*
+        version: link:../../packages/shared-config
+      '@teledrive/shared-types':
+        specifier: workspace:*
+        version: link:../../packages/shared-types
+      '@teledrive/shared-utils':
+        specifier: workspace:*
+        version: link:../../packages/shared-utils
+    devDependencies:
+      typescript:
+        specifier: ^5.3.3
+        version: 5.9.3
+
+  services/admin-service:
+    dependencies:
+      '@teledrive/shared-config':
+        specifier: workspace:*
+        version: link:../../packages/shared-config
+      '@teledrive/shared-types':
+        specifier: workspace:*
+        version: link:../../packages/shared-types
+      '@teledrive/shared-utils':
+        specifier: workspace:*
+        version: link:../../packages/shared-utils
+    devDependencies:
+      typescript:
+        specifier: ^5.3.3
+        version: 5.9.3
+
+  services/api-gateway:
+    dependencies:
+      '@teledrive/shared-config':
+        specifier: workspace:*
+        version: link:../../packages/shared-config
+      '@teledrive/shared-types':
+        specifier: workspace:*
+        version: link:../../packages/shared-types
+      '@teledrive/shared-utils':
+        specifier: workspace:*
+        version: link:../../packages/shared-utils
+    devDependencies:
+      typescript:
+        specifier: ^5.3.3
+        version: 5.9.3
+
+  services/auth-service:
+    dependencies:
+      '@teledrive/shared-config':
+        specifier: workspace:*
+        version: link:../../packages/shared-config
+      '@teledrive/shared-types':
+        specifier: workspace:*
+        version: link:../../packages/shared-types
+      '@teledrive/shared-utils':
+        specifier: workspace:*
+        version: link:../../packages/shared-utils
+    devDependencies:
+      typescript:
+        specifier: ^5.3.3
+        version: 5.9.3
+
+  services/download-service:
+    dependencies:
+      '@teledrive/shared-config':
+        specifier: workspace:*
+        version: link:../../packages/shared-config
+      '@teledrive/shared-types':
+        specifier: workspace:*
+        version: link:../../packages/shared-types
+      '@teledrive/shared-utils':
+        specifier: workspace:*
+        version: link:../../packages/shared-utils
+    devDependencies:
+      typescript:
+        specifier: ^5.3.3
+        version: 5.9.3
+
+  services/file-metadata-service:
+    dependencies:
+      '@teledrive/shared-config':
+        specifier: workspace:*
+        version: link:../../packages/shared-config
+      '@teledrive/shared-types':
+        specifier: workspace:*
+        version: link:../../packages/shared-types
+      '@teledrive/shared-utils':
+        specifier: workspace:*
+        version: link:../../packages/shared-utils
+    devDependencies:
+      typescript:
+        specifier: ^5.3.3
+        version: 5.9.3
+
+  services/file-processing-service:
+    dependencies:
+      '@teledrive/shared-config':
+        specifier: workspace:*
+        version: link:../../packages/shared-config
+      '@teledrive/shared-types':
+        specifier: workspace:*
+        version: link:../../packages/shared-types
+      '@teledrive/shared-utils':
+        specifier: workspace:*
+        version: link:../../packages/shared-utils
+    devDependencies:
+      typescript:
+        specifier: ^5.3.3
+        version: 5.9.3
+
+  services/file-upload-service:
+    dependencies:
+      '@teledrive/shared-config':
+        specifier: workspace:*
+        version: link:../../packages/shared-config
+      '@teledrive/shared-types':
+        specifier: workspace:*
+        version: link:../../packages/shared-types
+      '@teledrive/shared-utils':
+        specifier: workspace:*
+        version: link:../../packages/shared-utils
+    devDependencies:
+      typescript:
+        specifier: ^5.3.3
+        version: 5.9.3
+
+  services/notification-service:
+    dependencies:
+      '@teledrive/shared-config':
+        specifier: workspace:*
+        version: link:../../packages/shared-config
+      '@teledrive/shared-types':
+        specifier: workspace:*
+        version: link:../../packages/shared-types
+      '@teledrive/shared-utils':
+        specifier: workspace:*
+        version: link:../../packages/shared-utils
+    devDependencies:
+      typescript:
+        specifier: ^5.3.3
+        version: 5.9.3
+
+  services/preview-service:
+    dependencies:
+      '@teledrive/shared-config':
+        specifier: workspace:*
+        version: link:../../packages/shared-config
+      '@teledrive/shared-types':
+        specifier: workspace:*
+        version: link:../../packages/shared-types
+      '@teledrive/shared-utils':
+        specifier: workspace:*
+        version: link:../../packages/shared-utils
+    devDependencies:
+      typescript:
+        specifier: ^5.3.3
+        version: 5.9.3
+
+  services/storage-manager-service:
+    dependencies:
+      '@teledrive/shared-config':
+        specifier: workspace:*
+        version: link:../../packages/shared-config
+      '@teledrive/shared-types':
+        specifier: workspace:*
+        version: link:../../packages/shared-types
+      '@teledrive/shared-utils':
+        specifier: workspace:*
+        version: link:../../packages/shared-utils
+    devDependencies:
+      typescript:
+        specifier: ^5.3.3
+        version: 5.9.3
+
+  services/user-service:
+    dependencies:
+      '@teledrive/shared-config':
+        specifier: workspace:*
+        version: link:../../packages/shared-config
+      '@teledrive/shared-types':
+        specifier: workspace:*
+        version: link:../../packages/shared-types
+      '@teledrive/shared-utils':
+        specifier: workspace:*
+        version: link:../../packages/shared-utils
+    devDependencies:
+      typescript:
+        specifier: ^5.3.3
+        version: 5.9.3
+
+  services/video-streaming-service:
+    dependencies:
+      '@teledrive/shared-config':
+        specifier: workspace:*
+        version: link:../../packages/shared-config
+      '@teledrive/shared-types':
+        specifier: workspace:*
+        version: link:../../packages/shared-types
+      '@teledrive/shared-utils':
+        specifier: workspace:*
+        version: link:../../packages/shared-utils
+    devDependencies:
+      typescript:
+        specifier: ^5.3.3
+        version: 5.9.3
+
+  services/websocket-service:
+    dependencies:
+      '@teledrive/shared-config':
+        specifier: workspace:*
+        version: link:../../packages/shared-config
+      '@teledrive/shared-types':
+        specifier: workspace:*
+        version: link:../../packages/shared-types
+      '@teledrive/shared-utils':
+        specifier: workspace:*
+        version: link:../../packages/shared-utils
+    devDependencies:
+      typescript:
+        specifier: ^5.3.3
+        version: 5.9.3
+
 packages:
 
   /@eslint-community/eslint-utils@4.9.1(eslint@8.57.1):
