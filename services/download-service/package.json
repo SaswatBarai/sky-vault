@@ -1,0 +1,21 @@
+{
+  "name": "@teledrive/download-service",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@teledrive/shared-types": "workspace:*",
+    "@teledrive/shared-utils": "workspace:*",
+    "@teledrive/shared-config": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}
