@@ -3,7 +3,7 @@
     "globalDependencies": [
         "**/.env.*local"
     ],
-    "pipeline": {
+    "webpipeline": {
         "build": {
             "dependsOn": [
                 "^build"
