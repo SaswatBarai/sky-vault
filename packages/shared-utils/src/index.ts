@@ -89,3 +89,4 @@ export * from './errors';
 // Add this line to your existing exports
 export * from './middleware/validate';
 export { authenticate } from './middleware/authenticate';
+export { authorize } from './middleware/authorize';

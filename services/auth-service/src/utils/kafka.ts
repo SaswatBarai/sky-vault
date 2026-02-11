@@ -38,3 +38,27 @@ export async function publishUserLoggedIn(userId: string, loggedAt: string) {
         console.error('Kafka publish user.logged_in failed:', err);
     }
 }
+
+export async function publishUserLoggedOut(userId: string, reason: 'manual' | 'forced' = 'manual') {
+    try {
+        const p = await getProducer();
+        await p.send({
+            topic: KAFKA_TOPICS.USER_LOGGED_OUT,
+            messages: [{ key: userId, value: JSON.stringify({ userId, reason, loggedOutAt: new Date().toISOString() }) }],
+        });
+    } catch (err) {
+        console.error('Kafka publish user.logged_out failed:', err);
+    }
+}
+
+export async function publishTokenRevoked(userId: string, sessionId: string) {
+    try {
+        const p = await getProducer();
+        await p.send({
+            topic: KAFKA_TOPICS.TOKEN_REVOKED,
+            messages: [{ key: userId, value: JSON.stringify({ userId, sessionId, revokedAt: new Date().toISOString() }) }],
+        });
+    } catch (err) {
+        console.error('Kafka publish token.revoked failed:', err);
+    }
+}

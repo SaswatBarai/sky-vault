@@ -4,6 +4,7 @@ import helmet from 'helmet';
 import mongoose from 'mongoose';
 import { config } from '@teledrive/shared-config';
 import userRoutes from './routes/user.routes';
+import { startKafkaConsumer } from './utils/kafka';
 
 const app = express();
 
@@ -26,6 +27,11 @@ async function start() {
     try {
         await mongoose.connect(config.mongodb.uri, { dbName: config.mongodb.database });
         console.log('User service: MongoDB connected');
+
+        // Start Kafka consumer for file events (storage quota updates)
+        startKafkaConsumer().catch(err => {
+            console.error('User service: Kafka consumer failed to start (non-fatal):', err);
+        });
 
         const port = config.ports.userService;
         app.listen(port, () => {

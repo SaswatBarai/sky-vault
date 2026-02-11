@@ -1,7 +1,7 @@
 import { Router, IRouter } from 'express';
 import { AuthController } from '../controller/auth.controller';
 import { validate, authenticate } from '@teledrive/shared-utils';
-import { TelegramLoginSchema, RefreshTokenSchema } from '../schemas/auth.schema';
+import { TelegramLoginSchema, RefreshTokenSchema, LogoutSchema } from '../schemas/auth.schema';
 import { User } from '../models/user.models';
 
 const router: IRouter = Router();
@@ -20,16 +20,24 @@ router.get('/me', authenticate, async (req, res) => {
 
 // Login with Validation
 router.post(
-    '/login', 
-    validate(TelegramLoginSchema), 
+    '/login',
+    validate(TelegramLoginSchema),
     authController.login.bind(authController)
 );
 
 // Refresh with Validation
 router.post(
-    '/refresh', 
-    validate(RefreshTokenSchema), 
+    '/refresh',
+    validate(RefreshTokenSchema),
     authController.refresh.bind(authController)
+);
+
+// Logout (requires authentication + refresh token in body)
+router.post(
+    '/logout',
+    authenticate,
+    validate(LogoutSchema),
+    authController.logout.bind(authController)
 );
 
 export default router;
